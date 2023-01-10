@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -14,15 +15,39 @@ body {
   right: 0;
   margin: auto;
   width: 30vw;
-  height: 50vh;
+  height: 400px;
   top: 0;
   bottom: 0;
   box-shadow: 0 0 10px #d6d6d6;
   border-radius: 5px;
   background: #fff;
-  padding: 25px;
+  padding: 40px;
+}
+
+.wrapper-form {
   display: flex;
+  gap: 20px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+}
+
+.field-wrapper {
+  width: 100%;
+}
+
+.field-wrapper label {
+  display: block;
+}
+
+.col-full {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.col-full input {
+  padding: 5px;
+  width: 100%;
 }
