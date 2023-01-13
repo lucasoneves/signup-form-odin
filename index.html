@@ -15,46 +15,61 @@
   </head>
   <body>
     <div class="container">
-      <h2>Sign up form</h2>
-      <form action="/" method="POST">
-        <div class="wrapper-form">
-          <div class="col-full col-top">
-            <div class="field-wrapper">
-              <label for="first_name">First name</label>
-              <input type="text" name="first_name" id="first_name" />
+      <div class="image"></div>
+      <div class="form-wrapper">
+        <h3>
+          This is not a real online service. You know you need something like
+          this in your life to help you realize your deepest dreams.<br> Sign Up now
+          to get started.<br> You Know you want to
+        </h3>
+        <form action="/" method="POST">
+          <div class="wrapper-form">
+            <h3>Let's do this</h3>
+            <div class="col-full col-top">
+              <div class="field-wrapper">
+                <label for="first_name">First name</label>
+                <input type="text" name="first_name" id="first_name" />
+              </div>
+              <div class="field-wrapper">
+                <label for="last_name">Last name</label>
+                <input type="text" name="last_name" id="last_name" />
+              </div>
             </div>
-            <div class="field-wrapper">
-              <label for="last_name">Last name</label>
-              <input type="text" name="last_name" id="last_name" />
+            <div class="col-full col-center">
+              <div class="field-wrapper">
+                <label for="user_email">E-mail</label>
+                <input type="email" name="user_email" id="user_email" />
+              </div>
+              <div class="field-wrapper">
+                <label for="user_phone">Phone Number</label>
+                <input type="text" name="user_phone" id="user_phone" />
+              </div>
+            </div>
+            <div class="col-full col-bottom">
+              <div class="field-wrapper">
+                <label for="user_password">Password</label>
+                <input
+                  type="password"
+                  name="user_password"
+                  id="user_password"
+                />
+              </div>
+              <div class="field-wrapper">
+                <label for="user_confirm_password">Confirm Password</label>
+                <input
+                  type="password"
+                  name="user_password"
+                  id="user_confirm_password"
+                />
+              </div>
             </div>
           </div>
-          <div class="col-full col-center">
-            <div class="field-wrapper">
-              <label for="user_email">E-mail</label>
-              <input type="email" name="user_email" id="user_email" />
-            </div>
-            <div class="field-wrapper">
-              <label for="user_phone">Phone Number</label>
-              <input type="text" name="user_phone" id="user_phone" />
-            </div>
-          </div>
-          <div class="col-full col-bottom">
-            <div class="field-wrapper">
-              <label for="user_password">Password</label>
-              <input type="password" name="user_password" id="user_password" />
-            </div>
-            <div class="field-wrapper">
-              <label for="user_confirm_password">Confirm Password</label>
-              <input type="password" name="user_password" id="user_confirm_password" />
-            </div>
-          </div>
-        </div>
-        <button>Create Account</button>
-      </form>
-
-      
-      <p>Already have an account? <a href="#">Log in</a></p>
+          <button class="btn-createaccount">Create Account</button>
+        </form>
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>
     </div>
+
     <!-- Photo by
     <a
       href="https://unsplash.com/@cristofer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"

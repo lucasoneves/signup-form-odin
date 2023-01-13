@@ -10,18 +10,8 @@ body {
 }
 
 .container {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 30vw;
-  height: 400px;
-  top: 0;
-  bottom: 0;
-  box-shadow: 0 0 10px #d6d6d6;
-  border-radius: 5px;
-  background: #fff;
-  padding: 40px;
+  display: flex;
+  height: 100vh;
 }
 
 .wrapper-form {
@@ -30,6 +20,14 @@ body {
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
+  padding: 30px 50px;
+  margin: 30px -30px;
+  background: white;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.wrapper-form h3 {
+  width: 100%;
 }
 
 .field-wrapper {
@@ -50,4 +48,29 @@ body {
 .col-full input {
   padding: 5px;
   width: 100%;
+}
+
+.image {
+  background: url('../beach-form.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex: 1;
+  width: 100%;
+}
+
+.form-wrapper {
+  flex: 2;
+  padding: 30px;
+}
+
+.btn-createaccount {
+  background-color: #6b7f5a;
+  padding: 15px 40px;
+  border: transparent;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-left: 20px;
 }
