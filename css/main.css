@@ -36,6 +36,10 @@ body {
 
 .field-wrapper label {
   display: block;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  margin-bottom: 5px;
 }
 
 .col-full {
@@ -47,7 +51,7 @@ body {
 
 .col-full input {
   padding: 5px;
-  width: 100%;
+  width: 80%;
 }
 
 .image {
@@ -55,13 +59,31 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  flex: 1;
+  flex: 4;
   width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.image .image-container {
+  display: block;
+  margin: 20% auto 0 auto;
+  background: rgba(0,0,0,.4);
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }
 
 .form-wrapper {
-  flex: 2;
-  padding: 30px;
+  flex: 5;
+  padding: 5% 30px 0;
+}
+
+.form-wrapper h3.title {
+  max-width: 55%;
+  margin: 20px 0;
+  line-height: 1.2;
+  font-size: 22px;
 }
 
 .btn-createaccount {
@@ -73,4 +95,13 @@ body {
   font-weight: bold;
   cursor: pointer;
   margin-left: 20px;
+}
+
+.login-msg {
+  margin: 30px 20px 20px;
+}
+.login-msg a {
+  color: #6b7f5a;
+  text-decoration: none;
+  font-weight: bold;
 }
