@@ -17,14 +17,19 @@
     <div class="container">
       <div class="image">
         <div class="image-container">
-          <img src="./odin-lined.png" width="150" alt="Odin Logo" class="logo">
+          <img
+            src="./odin-lined.png"
+            width="150"
+            alt="Odin Logo"
+            class="logo"
+          />
         </div>
       </div>
       <div class="form-wrapper">
         <h3 class="title">
           This is not a real online service. You know you need something like
-          this in your life to help you realize your deepest dreams.<br> Sign Up now
-          to get started.<br>
+          this in your life to help you realize your deepest dreams.<br />
+          Sign Up now to get started.<br />
         </h3>
         <h3 class="title">You Know you want to.</h3>
         <form action="/" method="POST">
@@ -33,17 +38,22 @@
             <div class="col-full col-top">
               <div class="field-wrapper">
                 <label for="first_name">First name</label>
-                <input type="text" name="first_name" id="first_name" />
+                <input required type="text" name="first_name" id="first_name" />
               </div>
               <div class="field-wrapper">
                 <label for="last_name">Last name</label>
-                <input type="text" name="last_name" id="last_name" />
+                <input required type="text" name="last_name" id="last_name" />
               </div>
             </div>
             <div class="col-full col-center">
               <div class="field-wrapper">
                 <label for="user_email">E-mail</label>
-                <input type="email" name="user_email" id="user_email" />
+                <input
+                  required
+                  type="email"
+                  name="user_email"
+                  id="user_email"
+                />
               </div>
               <div class="field-wrapper">
                 <label for="user_phone">Phone Number</label>
@@ -57,6 +67,7 @@
                   type="password"
                   name="user_password"
                   id="user_password"
+                  required
                 />
               </div>
               <div class="field-wrapper">
@@ -65,6 +76,7 @@
                   type="password"
                   name="user_password"
                   id="user_confirm_password"
+                  required
                 />
               </div>
             </div>
@@ -74,5 +86,43 @@
         <p class="login-msg">Already have an account? <a href="#">Log in</a></p>
       </div>
     </div>
+
+    <script>
+      function checkPassword(password, confirmPassword) {
+        if (password && confirmPassword) {
+          if (password !== confirmPassword) {
+            document.getElementById("user_password").classList.add("error");
+            document
+              .getElementById("user_confirm_password")
+              .classList.add("error");
+          } else {
+            document.getElementById("user_password").classList.remove("error");
+            document
+              .getElementById("user_confirm_password")
+              .classList.remove("error");
+          }
+        }
+      }
+      function handlePassword(e) {
+        let userPassword;
+        let userPasswordConfirm;
+        document
+          .getElementById("user_password")
+          .addEventListener("blur", (e) => {
+            console.log("confirm password", e.target.value);
+            userPassword = e.target.value;
+            checkPassword(userPassword, userPasswordConfirm);
+          });
+        document
+          .getElementById("user_confirm_password")
+          .addEventListener("blur", (e) => {
+            console.log("confirm password", e.target.value);
+            userPasswordConfirm = e.target.value;
+            checkPassword(userPassword, userPasswordConfirm);
+          });
+      }
+
+      handlePassword();
+    </script>
   </body>
 </html>

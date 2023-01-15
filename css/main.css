@@ -52,6 +52,18 @@ body {
 .col-full input {
   padding: 5px;
   width: 80%;
+  border-radius: 5px;
+  border: 1px solid #E5E7EB;
+}
+
+.col-full input:focus {
+  border: 1px solid blue;
+  box-shadow: 0 0 10px lightgray;
+  outline: none;
+}
+
+.col-full input.error {
+  border: 1px solid rgb(179, 25, 25)
 }
 
 .image {
