@@ -80,7 +80,9 @@
                 />
               </div>
             </div>
+            <span id="messageFeedback"></span>
           </div>
+          
           <button class="btn-createaccount">Create Account</button>
         </form>
         <p class="login-msg">Already have an account? <a href="#">Log in</a></p>
@@ -95,11 +97,15 @@
             document
               .getElementById("user_confirm_password")
               .classList.add("error");
+              document.querySelector('.btn-createaccount').setAttribute('disabled', '')
+              document.querySelector('#messageFeedback').textContent = 'O campo senha e confirmação de senha estão diferentes'
+              document.querySelector('#messageFeedback').classList.add('error')
           } else {
             document.getElementById("user_password").classList.remove("error");
             document
               .getElementById("user_confirm_password")
               .classList.remove("error");
+              document.querySelector('.btn-createaccount').removeAttribute('disabled', '')
           }
         }
       }
@@ -109,9 +115,7 @@
         document
           .getElementById("user_password")
           .addEventListener("blur", (e) => {
-            console.log("confirm password", e.target.value);
             userPassword = e.target.value;
-            checkPassword(userPassword, userPasswordConfirm);
           });
         document
           .getElementById("user_confirm_password")

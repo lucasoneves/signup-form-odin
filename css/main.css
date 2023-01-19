@@ -117,3 +117,16 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+
+#messageFeedback {
+  width: 100%;
+  text-align: left;
+  display: block;
+  padding: 10px 30px;
+}
+
+#messageFeedback.error {
+  background: rgb(255, 239, 239);
+  border-radius: 4px;
+  color: rgb(62, 5, 5);
+}
